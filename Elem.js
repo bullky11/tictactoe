@@ -12,7 +12,9 @@ class Elem {
         this.h1Elem=$("article div:last-child h1")
         this.divElem.on("click",()=>{
            this.setElem("X")
-           console.log(`ma  ${this.#index} fánkot evett Peti`)
+          console.log(this.#index)
+           //létrehozunk egy saját esemént : elem Kattintas
+           this.kattintasTrigger()
         })
 
     }
@@ -21,6 +23,11 @@ class Elem {
     }
     setElem(adat){
         this.h1Elem.html(adat)
+    }
+    kattintasTrigger(){
+        //létrehozza a saját eseményünket
+        const esemeny=new CustomEvent("elemKattintas",{detail:this.#index})
+        window.dispatchEvent(esemeny)
     }
 }
 export default Elem;

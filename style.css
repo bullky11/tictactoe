@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+    width: 70%;
+    margin: auto;
+}
 article{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -15,4 +19,7 @@ article{
 }
 .elem:hover{
     background-color: rgb(145, 223, 223);
+}
+footer{
+    text-align: center;
 }
