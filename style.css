@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+article{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.elem{
+    border: solid rgb(91, 82, 99) 2px;
+    padding: 50px;
+    display: inline-block;
+    background-color: bisque;
+}
+.elem:hover{
+    background-color: rgb(145, 223, 223);
+}
